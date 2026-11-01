@@ -73,7 +73,6 @@ export default function Home() {
             if (tab !== 'practice') setPracticeCategory(undefined);
             setCurrentTab(tab);
           }}
-          userName="אריה שובר"
         />
       </div>
 
@@ -95,7 +94,6 @@ export default function Home() {
                 setCurrentTab(tab);
                 setMobileDrawerOpen(false);
               }}
-              userName="אריה שובר"
               onCloseMobile={() => setMobileDrawerOpen(false)}
             />
           </div>
@@ -126,14 +124,11 @@ export default function Home() {
           </div>
 
           <div className="flex items-center gap-2">
-            <span className="text-[11px] font-bold px-2 py-0.5 rounded-full bg-blue-50 text-[#1d68d8] border border-blue-200">
+            <span className="text-[11px] font-bold px-2.5 py-1 rounded-full bg-blue-50 text-[#1d68d8] border border-blue-200">
               דרגה {selectedLicense}
             </span>
-            <div className="flex items-center gap-1.5 pl-0.5">
-              <div className="w-7 h-7 rounded-full bg-[#0c1b33] flex items-center justify-center text-white font-bold text-xs shadow-xs">
-                א
-              </div>
-              <span className="text-xs font-bold text-slate-800 hidden xs:inline">אריה שובר</span>
+            <div className="w-8 h-8 rounded-full bg-[#0c1b33] flex items-center justify-center text-white shadow-xs">
+              <User className="w-4 h-4" />
             </div>
           </div>
         </header>
@@ -258,7 +253,7 @@ export default function Home() {
                 <div className="space-y-3 text-xs">
                   <div className="flex items-center justify-between py-2 border-b border-slate-100">
                     <span className="font-semibold text-slate-600">שם משתמש:</span>
-                    <span className="font-bold text-slate-900">אריה שובר</span>
+                    <span className="font-bold text-slate-900">תלמיד תיאוריה</span>
                   </div>
                   <div className="flex items-center justify-between py-2 border-b border-slate-100">
                     <span className="font-semibold text-slate-600">דרגת רישיון נבחרת:</span>

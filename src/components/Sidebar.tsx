@@ -1,6 +1,5 @@
 'use client';
 
-import React from 'react';
 import {
   Home,
   BookOpen,
@@ -8,22 +7,18 @@ import {
   Trophy,
   Settings,
   Car,
-  ChevronDown,
-  User,
   X,
 } from 'lucide-react';
 
 interface SidebarProps {
   currentTab: string;
   setCurrentTab: (tab: string) => void;
-  userName?: string;
   onCloseMobile?: () => void;
 }
 
 export default function Sidebar({
   currentTab,
   setCurrentTab,
-  userName = 'אריה שובר',
   onCloseMobile,
 }: SidebarProps) {
   const menuItems = [
@@ -112,7 +107,7 @@ export default function Sidebar({
         </nav>
       </div>
 
-      <div className="p-4 space-y-4">
+      <div className="p-4">
         {/* Promotional motivational badge */}
         <div className="relative overflow-hidden rounded-2xl bg-[#102342]/90 p-4 border border-blue-500/15 text-center shadow-inner">
           <div className="w-10 h-10 rounded-full bg-blue-500/15 mx-auto mb-2 flex items-center justify-center">
@@ -124,19 +119,6 @@ export default function Sidebar({
             <span className="text-slate-100 italic">נוהגים בבטחה מחר!</span>
           </div>
           <div className="w-20 h-1 bg-[#1d68d8] rounded-full mx-auto mt-2.5 transform -rotate-2" />
-        </div>
-
-        {/* User Profile Footer */}
-        <div className="pt-2 border-t border-slate-800/80 flex items-center justify-between px-1">
-          <div className="flex items-center gap-2.5">
-            <div className="w-9 h-9 rounded-full bg-slate-300 border border-slate-400 flex items-center justify-center text-slate-700 shadow-sm shrink-0">
-              <User className="w-5 h-5" />
-            </div>
-            <div className="text-right">
-              <div className="text-xs font-bold text-white tracking-wide">{userName}</div>
-            </div>
-          </div>
-          <ChevronDown className="w-4 h-4 text-slate-400" />
         </div>
       </div>
     </aside>
